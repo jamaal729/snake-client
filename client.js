@@ -32,23 +32,14 @@ const connect = function () {
       conn.write("Move: up");
       conn.write("Move: right");
 
-    }, 50);
+    }, 100);
     setTimeout(() =>  clearInterval (m), 2000);
   });
 
   return conn;
 }
 
-//  * Setup User Interface 
-//  * Specifically, so that we can handle user input via stdin
-//  */
-const setupInput = function() {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding('utf8');
-  stdin.resume();
-  return stdin;
-}
+
 
 const handleUserInput = function() {
 

@@ -1,21 +1,7 @@
-//  * Setup User Interface 
-//  * Specifically, so that we can handle user input via stdin
-//  */
-
-
-
-// const net = require('net');
-const connect = require('./client');
-const input = require('./input');
-
+const { connect } = require('./client');
+const { setupInput } = require('./input');
 console.log('Connecting ...');
-connect();
 
-// setupInput();
+const any = connect();
 
-
-
-// const setupInput = input.setupInput;
-// const handleUserInput = input.handleUserInput;
-
-// handleUserInput();
+setupInput(any);
